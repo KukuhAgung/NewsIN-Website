@@ -9,6 +9,9 @@ export default {
         title: "#151515",
         sub: "#8F8F8F",
       },
+      boxShadow: {
+        smm: "rgba(176, 0, 0, 0.19) 0px 10px 20px, rgba(176, 0, 0, 0.23) 0px 6px 6px",
+      },
     },
   },
   plugins: [],

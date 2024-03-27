@@ -1,20 +1,27 @@
 import { useState } from "react";
-import Button from "./components/Button/index.jsx";
 import Navbar from "./fragments/Navbar";
 import NavMob from "./fragments/NavMob.jsx";
+import Hero from "./fragments/Hero.jsx";
+import Categories from "./fragments/Categories.jsx";
 function App() {
   const [navbar, setNavbar] = useState(false);
   const navbartrue = () => {
-    console.log("test");
     setNavbar(!navbar);
   };
   return (
     <>
-      <main className="relative mx-[1rem] overflow-x-hidden">
+      <main className="relative overflow-x-hidden md:mx-4">
         <nav>
-          <Navbar />
-          <NavMob Navbar={navbartrue} />
+          <Navbar SetNav={navbartrue} NavStatus={navbar} />
+          {navbar ? <NavMob Navtransform={navbar} /> : null}
         </nav>
+        <section className="flex flex-col gap-2 md:flex md:flex-row">
+          <main className="flex flex-col gap-y-10 md:w-[70%]">
+            <Hero />
+            <Categories />
+          </main>
+          <aside className="flex flex-col gap-y-6 md:w-[30%]">asf</aside>
+        </section>
       </main>
     </>
   );
