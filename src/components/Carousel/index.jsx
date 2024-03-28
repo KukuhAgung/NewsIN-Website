@@ -6,50 +6,12 @@ import Navigation from "./nav-btn/index.jsx";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-const News = [
-  {
-    id: 1,
-    img: "/images/berita.svg",
-    title: "Moscow concert hall attack: death toll rises to 133",
-    sub: `Russian President Vladimir Putin says authorities arrested four men
-    suspected of carrying out the attack on a suburban Moscow concert
-    hall that killed at least 133 people and believe they were fleeing
-    to Ukraine. Putin said during an address to the nation Sat…`,
-  },
-  {
-    id: 2,
-    img: "/images/berita.svg",
-    title: "Moscow concert hall attack: death toll rises to 133",
-    sub: `Russian President Vladimir Putin says authorities arrested four men
-    suspected of carrying out the attack on a suburban Moscow concert
-    hall that killed at least 133 people and believe they were fleeing
-    to Ukraine. Putin said during an address to the nation Sat…`,
-  },
-  {
-    id: 3,
-    img: "/images/berita.svg",
-    title: "Moscow concert hall attack: death toll rises to 133",
-    sub: `Russian President Vladimir Putin says authorities arrested four men
-    suspected of carrying out the attack on a suburban Moscow concert
-    hall that killed at least 133 people and believe they were fleeing
-    to Ukraine. Putin said during an address to the nation Sat…`,
-  },
-  {
-    id: 4,
-    img: "/images/berita.svg",
-    title: "Moscow concert hall attack: death toll rises to 133",
-    sub: `Russian President Vladimir Putin says authorities arrested four men
-    suspected of carrying out the attack on a suburban Moscow concert
-    hall that killed at least 133 people and believe they were fleeing
-    to Ukraine. Putin said during an address to the nation Sat…`,
-  },
-];
-export default () => {
+export default ({News, Slides, Nav}) => {
   return (
     <Swiper
       modules={[Autoplay]}
       spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView={Slides}
       autoplay={{ pauseOnMouseEnter: true, delay: 6000 }}
       loop={true}
       className="md:hidden py-6"
@@ -59,7 +21,7 @@ export default () => {
           key={news.id}
           className="flex flex-wrap gap-1 items-center justify-center"
         >
-          <div className="flex flex-wrap gap-1 items-center justify-center w-[60%] border p-4 rounded-lg hover:shadow-smm hover:shadow-smm transition-all hover:duration-500 cursor-pointer">
+          <div className="flex flex-wrap gap-1 items-center justify-center w-[60%] border p-4 rounded-lg hover:shadow-smm transition-all hover:duration-500 cursor-pointer">
             <img src={`${news.img}`} alt={`${news.img}`} className="w-full" />
             <div className="flex flex-col gap-y-2 w-full">
               <h1 className="text-title font-semibold text-[14px]">
@@ -79,7 +41,7 @@ export default () => {
           </div>
         </SwiperSlide>
       ))}
-      <Navigation />
+      <Navigation display={Nav} />
     </Swiper>
   );
 };

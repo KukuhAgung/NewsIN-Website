@@ -67,10 +67,10 @@ function Categories() {
         </h6>
       </div>
       <div className="">
-        <Carousel />
+        <Carousel News={News} Slides={1}/>
         <div className="hidden md:flex gap-3">
           {News.map((news) => (
-            <div className="flex flex-wrap gap-1 items-center justify-center w-[60%] border p-4 rounded-lg hover:shadow-smm hover:shadow-smm transition-all hover:duration-500 cursor-pointer">
+            <div className="flex flex-wrap gap-1 items-center justify-center w-[60%] border p-4 rounded-lg hover:shadow-smm transition-all hover:duration-500 cursor-pointer">
               <img src={`${news.img}`} alt={`${news.img}`} className="w-full" />
               <div className="flex flex-col gap-y-2 w-full">
                 <h1 className="text-title font-semibold text-[14px]">
