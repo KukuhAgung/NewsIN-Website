@@ -3,7 +3,7 @@ import { FaCircle } from "react-icons/fa";
 
 function Hero() {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 md:mx-4">
       <div className="flex items-center justify-center w-full py-6 bg-sub my-2">
         <img
           src="/images/iklan.svg"
@@ -11,7 +11,7 @@ function Hero() {
           className="w-[226px] rounded-md"
         />
       </div>
-      <div className="flex flex-wrap gap-1 items-center">
+      <div className="flex flex-wrap gap-1 items-center border-b pb-6">
         <div className="w-full md:w-[344px] p-4">
           <img src="/images/berita.svg" alt="news" className="rounded-md min-w-full md:min-w-[324px]" />
         </div>
