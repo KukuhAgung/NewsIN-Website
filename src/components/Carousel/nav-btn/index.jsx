@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useSwiper } from "swiper/react";
 
+
 const index = ({ display }) => {
   const hidden = display ? "hidden" : "flex";
   const swiper = useSwiper();
