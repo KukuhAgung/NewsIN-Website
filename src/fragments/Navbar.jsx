@@ -66,6 +66,13 @@ const Navbar = () => {
         </motion.div>
         <div>test</div>
       </div>
+      <div className="flex items-center justify-center w-full md:w-[70.5%] py-6 bg-sub my-2">
+        <img
+          src="/images/iklan.svg"
+          alt="ads"
+          className="w-[226px] rounded-md"
+        />
+      </div>
     </div>
   );
 };
