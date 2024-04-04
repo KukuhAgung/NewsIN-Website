@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   const position = navbar ? "top-0" : "-top-[200%]";
   return (
-    <div className="realative md:mx-4">
+    <div className="md:mx-4 h-fit">
       <div className="flex items-center justify-between w-full p-4">
         <div onClick={navbartoggle} className="flex items-center md:gap-x-20">
           <IoIosMenu className="w-[30px] h-[40px] text-primary cursor-pointer md:hidden" />

@@ -93,11 +93,8 @@ function Footer() {
           <div className="flex flex-col gap-y-4 w-full md:-[40%] border-b border-sub">
             <div className="flex flex-wrap gap-2 py-4 px-3">
               {Navigation.map((nav) => (
-                <div className="w-[30%]">
-                  <h6
-                    key={nav.id}
-                    className="text-[14px] font-footer text-footer opacity-90"
-                  >
+                <div key={nav.id} className="w-[30%]">
+                  <h6 className="text-[14px] font-footer text-footer opacity-90">
                     {nav.title}
                   </h6>
                 </div>
@@ -114,7 +111,7 @@ function Footer() {
             <h6 className="font-footer uppercase text-footer">Network</h6>
             <div className="flex flex-wrap gap-y-3 gap-x-6 py-2">
               {Networks.map((network) => (
-                <div className="w-[100px]">
+                <div key={network.id} className="w-[100px]">
                   <img
                     src={network.image}
                     alt={network.id}

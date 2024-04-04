@@ -5,6 +5,8 @@ import PopularVideos from "../fragments/Videos.jsx";
 import Global from "../fragments/Global.jsx";
 import Other from "../fragments/Other.jsx";
 import Footer from "../fragments/Footer.jsx";
+import Sidebar from "./Sidebar.jsx";
+import Navbar from "../fragments/Navbar.jsx";
 
 function Main() {
   return (
@@ -17,7 +19,9 @@ function Main() {
         <Other />
         <Footer />
       </main>
-      <aside className="flex-col gap-y-6 md:w-[30%] hidden">asf</aside>
+      <aside className="md:w-[30%] hidden md:flex">
+        <Sidebar />
+      </aside>
     </section>
   );
 }

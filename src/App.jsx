@@ -6,7 +6,7 @@ import Copyright from "./components/Copyright/index.jsx";
 function App() {
   return (
     <>
-      <main className="relative overflow-x-hidden">
+      <main className="relative overflow-clip">
         <Navbar />
         <Main />
         <Copyright />
