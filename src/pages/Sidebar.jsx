@@ -5,7 +5,7 @@ import Schedule from "../components/Schedule/index.jsx";
 
 function Sidebar() {
   return (
-    <section className="w-full flex flex-col gap-4">
+    <section className="w-full flex flex-col gap-4 sticky top-0 h-screen">
       <div className="flex flex-col gap-y-6 px-4">
         <div className="">
           <div className="flex gap-x-1 items-center">
